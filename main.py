@@ -25,7 +25,7 @@ class Game:
                 pygame.display.flip()
             pygame.quit()
         except SystemExit:
-        pygame.quit()
+            pygame.quit()
 
 
 def main():
