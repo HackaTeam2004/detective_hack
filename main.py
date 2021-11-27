@@ -17,10 +17,15 @@ class Game:
         """
 
         pygame.init()
-        while not self.is_game_over:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    self.is_game_over = True
+        try:
+            while not self.is_game_over:
+                for event in pygame.event.get():
+                    if event.type == pygame.QUIT:
+                        self.is_game_over = True
+                pygame.display.flip()
+            pygame.quit()
+        except SystemExit:
+        pygame.quit()
 
 
 def main():
